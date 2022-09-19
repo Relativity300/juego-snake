@@ -1,7 +1,27 @@
   const STATE_RUNNING = 1;
   const STATE_LOSING = 2;
+let TipoNivel=prompt(`
+Nivel.
+Bajo: 1
+Medio: 2
+Alto: 3
+Inposibre: 4
+`);
+let Nivel;
+if (TipoNivel==4) {
+  Nivel=30
+}
+else if (TipoNivel==3) {
+  Nivel=50
+}
+else if (TipoNivel==2) {
+  Nivel=80
+}
+else if (TipoNivel==1) {
+  Nivel=100
+}
 
-  const TICK = 80;
+  const TICK = Nivel;
   const SQUARE_SIZE = 10;
   const BOARD_WIDTH = 50;
   const BOARD_HEIGHT = 50;
