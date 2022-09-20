@@ -1,5 +1,7 @@
   const STATE_RUNNING = 1;
   const STATE_LOSING = 2;
+  let numero = 0;
+  let numero2 = 0;
 let TipoNivel=prompt(`
 Nivel.
 Bajo: 1
@@ -61,6 +63,7 @@ else if (TipoNivel==1) {
     const highestIndex = state.snake.length - 1;
     let tail = {};
     let interval = TICK;
+    
 
     Object.assign(tail,
       state.snake[state.snake.length - 1]);
@@ -99,16 +102,25 @@ else if (TipoNivel==1) {
     if (detectCollision()) {
       state.runState = STATE_LOSING;
       state.growing = 0;
+      numero=0;
+      numero2 ++;
+      contador.innerHTML = numero;
+      dead.innerHTML = numero2;
+      
     }
 
     if (didScore) {
       state.growing += GROW_SCALE;
       state.prey = randomXY();
+      numero++;
+      contador.innerHTML = numero;
+      
     }
 
     if (state.growing > 0) {
       state.snake.push(tail);
       state.growing -= 1;
+      
     }
 
     requestAnimationFrame(draw);
@@ -122,7 +134,9 @@ else if (TipoNivel==1) {
       || head.x >= BOARD_WIDTH
       || head.y >= BOARD_HEIGHT
       || head.y < 0
+      
     ) {
+      
       return true;
     }
 
@@ -144,7 +158,9 @@ else if (TipoNivel==1) {
       y * SQUARE_SIZE,
       SQUARE_SIZE,
       SQUARE_SIZE
+      
     );
+    
   }
 
   function draw() {
@@ -158,7 +174,7 @@ else if (TipoNivel==1) {
     const {x, y} = state.prey;
     drawPixel('yellow', x, y);
   }
-
+  
   window.onload = function() {
     state.canvas = document.querySelector('canvas');
     state.context = state.canvas.getContext('2d');
@@ -175,7 +191,19 @@ else if (TipoNivel==1) {
           state.direction.y = y;
         }
       }
-    }
+    } 
 
     tick();
   };
+
+
+  const contador = document.getElementById("contar");
+  const dead = document.getElementById("muertes");
+
+
+
+
+
+sumar.addEventListener("click", ()=>{
+    
+});

@@ -4,10 +4,39 @@
   <title>Snake</title>
   <link rel="stylesheet" href="css/style-de-index.css">
 </head>
+
 <body>
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 
   <h1>Snake</h1>
   <h2>Bienvenido.</h2>
+  <h3> Puntos: <p class="contar" id="contar">0</p></h3>
+  <h3> Muertes: <p class="muertes" id="muertes">0</p></h3>
+  <div id="puntuacion">
+    <h3>mayor: <span id="contar"> </span> </h3>
+</div>
+
+  <div id="sesion">
+    <h3>Jugador: <span id="usuario"> </span> </h3>
+</div>
+<a href='#' id='cerrar-sesion'>Cerrar Secion</a>
+  <script>
+    //colocar los valores dentro del html
+    $('#sesion #usuario').text(localStorage.usuario);
+    $('#puntuacion #contar').text(localStorage.contar);
+
+    
+    
+    
+
+    //Cerrar sesion 
+    $('#cerrar-sesion').click(function(){
+        localStorage.clear();
+        window.location = "app.html";
+    });
+</script>
+
+  
 <canvas width="500" height="500"></canvas>
 <script src="js/juego.js"></script>
 
