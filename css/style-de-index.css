@@ -72,3 +72,53 @@ audio{
   z-index: 1;
   left: -2em;
 }
+
+.cerrar-sesion{
+  position: relative;
+  right: 25em;
+  z-index: 3;
+  font-size: 1.5em;
+  color: black;
+  background-color: aquamarine;
+  text-decoration: none;
+  border-radius: .5em;
+  border: solid 2px rgb(136, 0, 255);
+}
+
+.cerrar-sesion:hover{
+  right: 21.5em;
+  font-size: 1.7em;
+  color: black;
+  background-color: rgb(103, 235, 191);
+  border: solid 2px rgb(129, 4, 239);
+}
+.cerrar-sesion:active{
+  right: 18em;
+  font-size: 1.9em;
+  color: black;
+  background-color: rgb(76, 210, 165);
+  border: solid 2px rgb(73, 4, 133);
+}
+.top{
+  position: relative;
+  right: 27em;
+  bottom: 11em;
+  z-index: 3;
+  font-size: 1.5em;
+  color: black;
+  background-color: aquamarine;
+  text-decoration: none;
+  border-radius: .5em;
+  border: solid 2px rgb(136, 0, 255);
+
+}
+.top:hover{
+  color: black;
+  background-color: rgb(103, 235, 191);
+  border: solid 2px rgb(129, 4, 239);
+}
+.top:active{
+  color: black;
+  background-color: rgb(76, 210, 165);
+  border: solid 2px rgb(73, 4, 133);
+}

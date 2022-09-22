@@ -1,0 +1,28 @@
+body{
+    /* background-color: rgb(36, 39, 42); */
+    background-image: url(https://images8.alphacoders.com/860/860215.jpg);
+}
+.center{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 10em;
+}
+.redu{
+    width: 25em;
+}
+li{
+    margin: 1em;
+}
+ol{
+    background-color: rgba(240, 248, 255, 0.71);
+    border: solid 2px #000  ;
+    border-radius: 1em;
+}
+h1{
+    text-align: center;
+    color: aliceblue;
+    position: relative;
+    top: 3em;    
+
+}
